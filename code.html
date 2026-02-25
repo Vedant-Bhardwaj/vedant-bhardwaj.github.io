@@ -1,137 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Code | Vedant Bhardwaj</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="topbar">
+    <nav class="nav">
+      <div class="nav-right">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="CV_Vedant_Bhardwaj.pdf">CV</a>
+        <a class="navlink" href="research.html">Research</a>
+        <a class="navlink" href="teaching.html">Teaching</a>
+        <a class="navlink active" href="code.html">Codes</a>
+        <button id="themeToggle" class="iconbtn" aria-label="Toggle dark mode" title="Toggle theme">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-  <!-- NAV (same as other pages) -->
-<header class="topbar">
-  <nav class="nav">
-    <div class="nav-right">
-      <a href="index.html">Home</a>
-      <a href="CV_Vedant_Bhardwaj.pdf">CV</a>
-      <a href="research.html">Research</a>
-      <a href="teaching.html" class="active">Teaching</a>
-      <a href="code.html">Codes</a>
-      <button id="themeToggle" class="iconbtn" aria-label="Toggle dark mode" title="Toggle theme">
-        <span id="themeIcon" aria-hidden="true">🌙</span>
-      </button>
-    </div>
-  </nav>
-</header>
-
-  <main class="wrap">
+  <main class="wrap page-narrow">
     <h1 class="page-title">Code</h1>
-    <p class="page-subtitle">
-      Selected repositories and replication materials.
-    </p>
+    <p class="page-intro">Selected repositories and replication materials.</p>
 
-    <!-- R PACKAGE -->
-    <section class="section">
-      <h2 class="section-title">R Package</h2>
-
-      <article class="card">
-        <div class="card-top">
-          <div>
-            <h3 class="card-title">GIReg</h3>
-            <p class="card-meta">R package (research software)</p>
-          </div>
-
-          <div class="card-actions">
-            <a class="btn" href="https://github.com/Vedant-Bhardwaj/GIReg" target="_blank" rel="noopener">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <p class="card-text">
-          Implementation package for GIReg-related methods and experiments.
-          (Add one line here later once you finalize the package DESCRIPTION/README text.)
-        </p>
-
-        <div class="tagrow">
-          <span class="tag">R</span>
-          <span class="tag">Package</span>
-          <span class="tag">Econometrics</span>
-        </div>
-      </article>
+    <section class="code-block">
+      <h2 class="section-heading">R Package</h2>
+      <h3 class="item-title">GIReg</h3>
+      <p class="item-meta">R package (research software)</p>
+      <p><a href="https://github.com/Vedant-Bhardwaj/GIReg" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="item-desc">
+        Implementation package for GIReg-related methods and experiments.
+        (Add one line here later once you finalize the package DESCRIPTION/README text.)
+      </p>
+      <p class="item-tag">R Package Econometrics</p>
     </section>
 
-    <!-- REPLICATION / PROJECTS -->
-    <section class="section">
-      <h2 class="section-title">Replication & Projects</h2>
+    <section class="code-block">
+      <h2 class="section-heading">Replication &amp; Projects</h2>
 
-      <article class="card">
-        <div class="card-top">
-          <div>
-            <h3 class="card-title">Education — Effect of starting age on school performance</h3>
-            <p class="card-meta">Replication materials</p>
-          </div>
-
-          <div class="card-actions">
-            <a class="btn" href="https://github.com/Vedant-Bhardwaj/Education" target="_blank" rel="noopener">
-              GitHub
-            </a>
-            <a class="btn btn-ghost" href="https://link.springer.com/chapter/10.1007/978-3-031-90911-5_3" target="_blank" rel="noopener">
-              Springer chapter
-            </a>
-          </div>
-        </div>
-
-        <p class="card-text">
-          Related to the book chapter <em>“Evaluating Educational Policies in Practice”</em>.
-          The chapter evaluates two education policies using empirical methods: (i) the Texas Top Ten Percent rule,
-          and (ii) a regression discontinuity design studying school-starting age, with results suggesting older starters
-          generally perform better in standardized tests. :contentReference[oaicite:1]{index=1}
-        </p>
-
-        <div class="tagrow">
-          <span class="tag">Replication</span>
-          <span class="tag">RDD</span>
-          <span class="tag">Education policy</span>
-        </div>
-      </article>
+      <h3 class="item-title">Education — Effect of starting age on school performance</h3>
+      <p class="item-meta">Replication materials</p>
+      <p>
+        <a href="https://github.com/Vedant-Bhardwaj" target="_blank" rel="noopener">GitHub</a>
+        &nbsp;·&nbsp;
+        <a href="https://link.springer.com/" target="_blank" rel="noopener">Springer chapter</a>
+      </p>
+      <p class="item-desc">
+        Related to the book chapter “Evaluating Educational Policies in Practice”.
+        The chapter evaluates two education policies using empirical methods:
+        (i) the Texas Top Ten Percent rule, and (ii) a regression discontinuity design
+        studying school-starting age, with results suggesting older starters generally
+        perform better in standardized tests.
+      </p>
+      <p class="item-tag">Replication RDD Education policy</p>
     </section>
 
     <div class="mail">
-      <a class="mailbtn" href="mailto:vbhardwa@eco.uc3m.es" aria-label="Email Vedant">✉️</a>
+      <a class="mailbtn" href="mailto:vedant.bhardwaj@uc3m.es" aria-label="Email">✉️</a>
     </div>
 
     <footer class="footer">
-      © <span id="year"></span> Vedant Bhardwaj.
+      © 2026 Vedant Bhardwaj.
     </footer>
   </main>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
     const root = document.documentElement;
     const btn = document.getElementById("themeToggle");
     const icon = document.getElementById("themeIcon");
-
-    function setTheme(theme) {
-      if (theme === "dark") {
-        root.classList.add("dark");
-        icon.textContent = "☀️";
-      } else {
-        root.classList.remove("dark");
-        icon.textContent = "🌙";
-      }
-      localStorage.setItem("theme", theme);
-    }
-
     const saved = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setTheme(saved ? saved : (prefersDark ? "dark" : "light"));
+    if (saved === "dark") root.classList.add("dark");
+    icon.textContent = root.classList.contains("dark") ? "☀️" : "🌙";
 
-    btn.addEventListener("click", () => {
-      setTheme(root.classList.contains("dark") ? "light" : "dark");
+    btn?.addEventListener("click", () => {
+      root.classList.toggle("dark");
+      const dark = root.classList.contains("dark");
+      localStorage.setItem("theme", dark ? "dark" : "light");
+      icon.textContent = dark ? "☀️" : "🌙";
     });
   </script>
 </body>
 </html>
-
