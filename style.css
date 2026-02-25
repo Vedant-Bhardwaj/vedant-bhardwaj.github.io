@@ -32,7 +32,7 @@ html, body{
   line-height: 1.6;
 }
 
-/* ====== Topbar Nav ====== */
+/* ====== Topbar Nav (shared across all pages) ====== */
 .topbar{
   position: sticky;
   top: 0;
@@ -52,21 +52,27 @@ html, body{
 .nav-right{
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 22px;
 }
 
 .navlink{
-  text-decoration: none;
-  color: var(--muted);
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
   font-size: 16px;
+  line-height: 1;
 }
 
 .navlink:hover{
-  color: var(--text);
+  color: var(--link-hover);
 }
 
 .navlink.active{
   color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
 }
 
 .iconbtn{
@@ -171,23 +177,9 @@ a:hover{
   padding: 22px 0 10px;
 }
 
-/* ====== Responsive ====== */
-@media (max-width: 900px){
-  .hero{
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .hero-photo img{
-    margin: 0;
-    max-width: 380px;
-  }
-  .name{
-    font-size: 44px;
-  }
-}
 /* ====== Teaching page ====== */
 .teaching-wrap{
-  padding-top: 46px;   /* uses same .wrap container alignment as homepage */
+  padding-top: 46px;
   padding-bottom: 40px;
 }
 
@@ -222,7 +214,6 @@ a:hover{
   color: var(--text);
 }
 
-/* optional badge style if you re-add the award line */
 .teach-badge{
   display: inline-block;
   margin-left: 10px;
@@ -232,13 +223,6 @@ a:hover{
   border: 1px solid var(--border);
   background: rgba(127,127,127,0.08);
   color: var(--muted);
-}
-
-@media (max-width: 900px){
-  .teaching-wrap{ padding-top: 28px; }
-  .teaching-title{ font-size: 48px; margin-bottom: 20px; }
-  .teach-subtitle{ font-size: 28px; }
-  .teach-list li{ font-size: 17px; }
 }
 
 /* ====== Shared inner pages (Code / Research / Teaching) ====== */
@@ -341,8 +325,42 @@ a:hover{
   font-style: italic;
 }
 
-/* Mobile tweaks */
+/* ====== Responsive ====== */
 @media (max-width: 900px){
+  .nav{
+    padding: 14px 16px;
+  }
+
+  .nav-right{
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .navlink{
+    font-size: 15px;
+    text-underline-offset: 4px;
+  }
+
+  .hero{
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hero-photo img{
+    margin: 0;
+    max-width: 380px;
+  }
+
+  .name{
+    font-size: 44px;
+  }
+
+  .teaching-wrap{ padding-top: 28px; }
+  .teaching-title{ font-size: 48px; margin-bottom: 20px; }
+  .teach-subtitle{ font-size: 28px; }
+  .teach-list li{ font-size: 17px; }
+
   .page-title{ font-size: 34px; }
   .section-heading{ font-size: 24px; }
   .item-title{ font-size: 20px; }
