@@ -1,4 +1,20 @@
-<!-- Teaching Page HTML -->
+<!-- Top Navigation -->
+<header class="topbar">
+  <nav class="nav">
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="CV_Vedant_Bhardwaj.pdf">CV</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="code.html">Codes</a>
+      <button id="themeToggle" class="iconbtn" aria-label="Toggle dark mode" title="Toggle theme">
+        <span id="themeIcon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Teaching Page -->
 <main class="page teaching-page">
   <div class="page-inner">
 
@@ -18,10 +34,8 @@
     <section class="teach-section">
       <h2 class="section-title">Graduate</h2>
       <ul class="teach-bullets">
-        <li>
-        <! --  Econometrics I (Master in Economic Analysis) (2024, 2023), TA, UC3M
-          <span class="badge">Teaching Excellence Acknowledgement</span> -->
-        </li>
+        <!-- Econometrics I (Master in Economic Analysis) (2024, 2023), TA, UC3M
+        <span class="badge">Teaching Excellence Acknowledgement</span> -->
         <li>Econometrics I (PhD Program in Economics) (2024, 2023), TA, UC3M</li>
       </ul>
     </section>
@@ -39,13 +53,73 @@
 
 <style>
 /* ===========================
+   Base / nav styles
+   =========================== */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #e9e9e9;
+  color: #111;
+}
+
+/* Top bar */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #e9e9e9;
+  padding: 18px 28px 8px;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-right a {
+  color: #3f51ff;              /* blue like screenshot */
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.nav-right a:hover {
+  opacity: 0.8;
+}
+
+.iconbtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.05rem;
+  padding: 2px 4px;
+  line-height: 1;
+}
+
+/* ===========================
    Teaching page only styles
    =========================== */
 
 .teaching-page {
-  background: #e9e9e9; /* soft gray like screenshot */
+  background: #e9e9e9;
   min-height: 100vh;
-  padding: 24px 0 40px;
+  /* push content below fixed topbar */
+  padding: 96px 0 40px;
 }
 
 .teaching-page .page-inner {
@@ -53,7 +127,6 @@
   margin: 0 auto;
   padding: 0 48px;
   color: #111;
-  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .teaching-page .page-h1 {
@@ -110,6 +183,25 @@
 
 /* Responsive */
 @media (max-width: 900px) {
+  .topbar {
+    padding: 14px 16px 8px;
+  }
+
+  .nav-right {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav-right a {
+    font-size: 1rem;
+    text-underline-offset: 4px;
+  }
+
+  .teaching-page {
+    padding-top: 120px;
+  }
+
   .teaching-page .page-inner {
     padding: 0 24px;
   }
