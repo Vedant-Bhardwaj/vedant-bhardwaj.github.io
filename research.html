@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Research | Vedant Bhardwaj</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <div class="nav-right">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="CV_Vedant_Bhardwaj.pdf">CV</a>
+        <a class="navlink active" href="research.html">Research</a>
+        <a class="navlink" href="teaching.html">Teaching</a>
+        <a class="navlink" href="code.html">Codes</a>
+        <button id="themeToggle" class="iconbtn" aria-label="Toggle dark mode" title="Toggle theme">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap page-narrow research-page">
+    <h1 class="page-title">Research</h1>
+
+    <section class="wip-section">
+      <h2 class="wip-heading">Work in Progress</h2>
+
+      <ul class="wip-list">
+        <li>
+          <div class="wip-title">Gini Index Regression</div>
+          <div class="wip-coauthors">Joint with David Díaz-Villarejo</div>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    const root = document.documentElement;
+    const btn = document.getElementById("themeToggle");
+    const icon = document.getElementById("themeIcon");
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") root.classList.add("dark");
+    icon.textContent = root.classList.contains("dark") ? "☀️" : "🌙";
+
+    btn?.addEventListener("click", () => {
+      root.classList.toggle("dark");
+      const dark = root.classList.contains("dark");
+      localStorage.setItem("theme", dark ? "dark" : "light");
+      icon.textContent = dark ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>
