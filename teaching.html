@@ -1,84 +1,30 @@
-<main class="page">
+<!-- Teaching Page HTML -->
+<main class="page teaching-page">
   <div class="page-inner">
 
     <h1 class="page-h1">Teaching</h1>
 
-    <div class="teaching-list">
+    <section class="teach-section">
+      <h2 class="section-title">Undergraduate</h2>
+      <ul class="teach-bullets">
+        <li>Mathematics for Economics I (2024), TA, UC3M</li>
+        <li>Econometrics (2024, 2023), TA, UC3M</li>
+        <li>Game Theory (2022, 2021), TA, UC3M</li>
+        <li>Economics II (Macroeconomics) (2022), TA, UC3M</li>
+        <li>Mathematics for Economics II (2022), TA, UC3M</li>
+      </ul>
+    </section>
 
-      <div class="teaching-item">
-        <div class="teaching-row">
-          <span class="yrs">2024 • 2023.</span>
-          <span class="txt">
-            Econometrics I (Master in Economic Analysis) (Teaching Assistant),
-            <em>Universidad Carlos III de Madrid</em>
-          </span>
-        </div>
-        <div class="badge-wrap">
+    <section class="teach-section">
+      <h2 class="section-title">Graduate</h2>
+      <ul class="teach-bullets">
+        <li>
+          Econometrics I (Master in Economic Analysis) (2024, 2023), TA, UC3M
           <span class="badge">Teaching Excellence Acknowledgement</span>
-        </div>
-      </div>
-
-      <div class="teaching-item">
-        <div class="teaching-row">
-          <span class="yrs">2024.</span>
-          <span class="txt">
-            Mathematics for Economics I (Teaching Assistant),
-            <em>Universidad Carlos III de Madrid</em>
-          </span>
-        </div>
-      </div>
-
-      <div class="teaching-item">
-        <div class="teaching-row">
-          <span class="yrs">2024 • 2023.</span>
-          <span class="txt">
-            Econometrics I (PhD Program in Economics) (Teaching Assistant),
-            <em>Universidad Carlos III de Madrid</em>
-          </span>
-        </div>
-      </div>
-
-      <div class="teaching-item">
-        <div class="teaching-row">
-          <span class="yrs">2024 • 2023.</span>
-          <span class="txt">
-            Econometrics (Teaching Assistant),
-            <em>Universidad Carlos III de Madrid</em>
-          </span>
-        </div>
-      </div>
-
-      <div class="teaching-item">
-        <div class="teaching-row">
-          <span class="yrs">2022 • 2021.</span>
-          <span class="txt">
-            Game Theory (Teaching Assistant),
-            <em>Universidad Carlos III de Madrid</em>
-          </span>
-        </div>
-      </div>
-
-      <div class="teaching-item">
-        <div class="teaching-row">
-          <span class="yrs">2022.</span>
-          <span class="txt">
-            Economics II (Macroeconomics) (Teaching Assistant),
-            <em>Universidad Carlos III de Madrid</em>
-          </span>
-        </div>
-      </div>
-
-      <div class="teaching-item">
-        <div class="teaching-row">
-          <span class="yrs">2022.</span>
-          <span class="txt">
-            Mathematics for Economics II (Teaching Assistant),
-            <em>Universidad Carlos III de Madrid</em>
-          </span>
-        </div>
-      </div>
-
-    </div>
+        </li>
+        <li>Econometrics I (PhD Program in Economics) (2024, 2023), TA, UC3M</li>
+      </ul>
+    </section>
 
     <footer class="page-footer">
       © <span id="year"></span> Vedant Bhardwaj. Last updated: February 10, 2025.
@@ -86,3 +32,106 @@
 
   </div>
 </main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<style>
+/* ===========================
+   Teaching page only styles
+   =========================== */
+
+.teaching-page {
+  background: #e9e9e9; /* soft gray like screenshot */
+  min-height: 100vh;
+  padding: 24px 0 40px;
+}
+
+.teaching-page .page-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px;
+  color: #111;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.teaching-page .page-h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 0 0 48px 0;
+  letter-spacing: -0.5px;
+}
+
+.teaching-page .teach-section {
+  margin-bottom: 42px;
+}
+
+.teaching-page .section-title {
+  font-size: 2.6rem;
+  font-weight: 400;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.2px;
+}
+
+.teaching-page .teach-bullets {
+  margin: 0;
+  padding-left: 1.7rem;
+  max-width: 980px;
+}
+
+.teaching-page .teach-bullets li {
+  font-size: 1.08rem;
+  line-height: 1.5;
+  margin: 8px 0;
+}
+
+.teaching-page .badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  border-radius: 999px;
+  background: #d7ecff;
+  color: #0b4f8a;
+  border: 1px solid #b7daf7;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.teaching-page .page-footer {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .teaching-page .page-inner {
+    padding: 0 24px;
+  }
+
+  .teaching-page .page-h1 {
+    font-size: 3rem;
+    margin-bottom: 34px;
+  }
+
+  .teaching-page .section-title {
+    font-size: 2rem;
+  }
+
+  .teaching-page .teach-bullets li {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .teaching-page .badge {
+    display: inline-block;
+    margin-top: 6px;
+    margin-left: 0;
+  }
+}
+</style>
