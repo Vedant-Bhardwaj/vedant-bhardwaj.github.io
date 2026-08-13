@@ -25,16 +25,66 @@
   <main class="wrap page-narrow research-page">
     <h1 class="page-title">Research</h1>
 
-    <section class="wip-section">
-      <h2 class="wip-heading">Work in Progress</h2>
+    <section class="research-section" aria-labelledby="working-papers-heading">
+      <h2 id="working-papers-heading" class="research-heading">Working Papers</h2>
 
-      <ul class="wip-list">
-        <li>
-          <div class="wip-title">Gini Index Regression</div>
-          <div class="wip-coauthors">Joint with David Díaz-Villarejo</div>
-        </li>
+      <article class="paper-entry">
+        <h3 class="paper-title">
+          Locally Robust Semiparametric Estimation of Parametric Conditional Gini
+        </h3>
+        <p class="paper-authors">
+          with
+          <a class="coauthor-link" href="https://ddiazvil.com/">David Díaz-Villarejo</a>,
+          Juan Carlos Escanciano, and Joel R. Terschuur
+        </p>
 
-      </ul>
+        <details class="abstract-details" open>
+          <summary>Abstract</summary>
+          <div class="abstract-card">
+            <p>
+              We derive the influence functions for functionals of conditional
+              distributions to propose locally robust estimation and inference for Gini
+              Index Regression (GIR) models. We consider three alternative model
+              specifications as leading examples, and the resulting procedures are
+              robust to first-stage, nonparametric kernel estimation of the conditional
+              distribution function. We illustrate our theoretical findings via Monte
+              Carlo experiments and an empirical application.
+            </p>
+          </div>
+        </details>
+      </article>
+    </section>
+
+    <section class="research-section" aria-labelledby="work-in-progress-heading">
+      <h2 id="work-in-progress-heading" class="research-heading">Work in Progress</h2>
+
+      <article class="paper-entry">
+        <h3 class="paper-title">Gini Index Regression</h3>
+        <p class="paper-authors">
+          with
+          <a class="coauthor-link" href="https://ddiazvil.com/">David Díaz-Villarejo</a>
+        </p>
+
+        <details class="abstract-details" open>
+          <summary>Abstract</summary>
+          <div class="abstract-card">
+            <p>
+              We propose a parametric model for the conditional Gini index, in the
+              spirit of mean and quantile regression. We derive the moment condition
+              for a general parametric specification and develop the econometric
+              theory for the linear case: identification results, including under model
+              misspecification, a loss function for the conditional Gini index, an
+              R<sup>2</sup>-type goodness-of-fit measure, a Gini Index Regression (GIR)
+              estimator, and bootstrap-based inference. An empirical application to
+              U.S. labor market data reveals substantially higher inequality among
+              non-union workers and shows that, among the college-educated and
+              controlling for characteristics, occupation, and industry, inequality is
+              modest at labor market entry — consistent with the skill-biased technical
+              change hypothesis — but rises sharply with experience.
+            </p>
+          </div>
+        </details>
+      </article>
     </section>
   </main>
 
