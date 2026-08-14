@@ -8,7 +8,8 @@
   --border: #e5e7eb;
   --shadow: 0 12px 30px rgba(0,0,0,0.12);
   --card: #ffffff;
-  --abstract-bg: #f7f7f8;
+  --abstract-bg: #f4f4f4;
+  --abstract-border: #d9d9d9;
   --author: #737373;
 }
 
@@ -21,7 +22,8 @@
   --border: rgba(255,255,255,0.14);
   --shadow: 0 14px 38px rgba(0,0,0,0.5);
   --card: #0f172a;
-  --abstract-bg: #111a2c;
+  --abstract-bg: #111827;
+  --abstract-border: #334155;
   --author: #a3a3a3;
 }
 
@@ -341,7 +343,7 @@ a:hover{ color: var(--link-hover); }
 .abstract-card{
   margin-top: 24px;
   padding: 20px 22px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--abstract-border);
   border-radius: 10px;
   background: var(--abstract-bg);
   color: var(--text);
