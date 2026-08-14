@@ -5,24 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Research and publications by Vedant Bhardwaj" />
   <title>Research | Vedant Bhardwaj</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="research-body">
-  <nav class="site-nav" aria-label="Primary navigation">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">Vedant Bhardwaj</a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a class="active" href="research.html" aria-current="page">Research</a>
-        <a href="CV_Vedant_Bhardwaj.pdf">CV</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="code.html">Codes</a>
+  <header class="topbar">
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="nav-right">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="CV_Vedant_Bhardwaj.pdf">CV</a>
+        <a class="navlink active" href="research.html" aria-current="page">Research</a>
+        <a class="navlink" href="teaching.html">Teaching</a>
+        <a class="navlink" href="code.html">Codes</a>
+        <button id="themeToggle" class="iconbtn" aria-label="Toggle dark mode" title="Toggle theme">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <main class="site-wrap">
     <section class="research-row" aria-labelledby="working-papers-heading">
@@ -67,12 +66,6 @@
       </div>
       <div class="section-content">
         <article class="research-item publication">
-          <h2><a href="https://doi.org/10.1007/978-3-031-90911-5_3" target="_blank" rel="noopener">Evaluating Educational Policies in Practice</a></h2>
-          <p class="small-meta authors">with <span class="coauthor">María Valkov</span> and <span class="coauthor">Alejandro Puerta-Cuartas</span></p>
-          <p class="small-meta"><span class="journal">Economics of Education: An Introductory Textbook</span>, pp. 97–134, 2025. DOI: 10.1007/978-3-031-90911-5_3</p>
-        </article>
-
-        <article class="research-item publication">
           <h2><a href="https://doi.org/10.1016/j.jpolmod.2022.09.018" target="_blank" rel="noopener">Financial Access and Household’s Borrowing: Policy Perspectives of an Emerging Economy</a></h2>
           <p class="small-meta authors">with <span class="coauthor">Aswini Kumar Mishra</span></p>
           <p class="small-meta"><span class="journal">Journal of Policy Modeling</span>, 44(5): 981–999, 2022. DOI: 10.1016/j.jpolmod.2022.09.018</p>
@@ -108,6 +101,20 @@
           <p class="small-meta"><span class="journal">International Journal of Social Economics</span>, 48(3): 492–512, 2021. DOI: 10.1108/IJSE-07-2020-0458</p>
         </article>
 
+      </div>
+    </section>
+
+    <section class="research-row publications-row" aria-labelledby="chapters-heading">
+      <div class="section-label">
+        <h1 id="chapters-heading">Chapters in Books</h1>
+      </div>
+      <div class="section-content">
+        <article class="research-item publication">
+          <h2><a href="https://doi.org/10.1007/978-3-031-90911-5_3" target="_blank" rel="noopener">Evaluating Educational Policies in Practice</a></h2>
+          <p class="small-meta authors">with <span class="coauthor">María Valkov</span> and <span class="coauthor">Alejandro Puerta-Cuartas</span></p>
+          <p class="small-meta"><span class="journal">Economics of Education: An Introductory Textbook</span>, pp. 97–134, 2025. DOI: 10.1007/978-3-031-90911-5_3</p>
+        </article>
+
         <article class="research-item publication">
           <h2><a href="https://doi.org/10.1007/978-3-030-60008-2_7" target="_blank" rel="noopener">How Do Household and Spatial Factors Matter While Examining Inequality in Credit Availability? Evidence from an Emerging Economy</a></h2>
           <p class="small-meta authors">with <span class="coauthor">Aswini Kumar Mishra</span></p>
@@ -118,5 +125,22 @@
   </main>
 
   <footer class="research-footer">© 2026 Vedant Bhardwaj</footer>
+
+  <script>
+    const root = document.documentElement;
+    const btn = document.getElementById("themeToggle");
+    const icon = document.getElementById("themeIcon");
+    const saved = localStorage.getItem("theme");
+
+    if (saved === "dark") root.classList.add("dark");
+    icon.textContent = root.classList.contains("dark") ? "☀️" : "🌙";
+
+    btn?.addEventListener("click", () => {
+      root.classList.toggle("dark");
+      const dark = root.classList.contains("dark");
+      localStorage.setItem("theme", dark ? "dark" : "light");
+      icon.textContent = dark ? "☀️" : "🌙";
+    });
+  </script>
 </body>
 </html>
