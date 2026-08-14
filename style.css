@@ -402,62 +402,27 @@ a:hover{ color: var(--link-hover); }
 
 /* ====== Ramos-style research page ====== */
 .research-body{
-  --research-page: #fbf8f3;
-  --research-nav: #17241d;
-  --research-ink: #111111;
-  --research-meta: #303030;
-  --research-link: #0d6efd;
-  --research-link-hover: #084298;
-  --research-abstract: #f4efe7;
+  --research-page: var(--bg);
+  --research-ink: var(--text);
+  --research-meta: var(--muted);
+  --research-link: var(--link);
+  --research-link-hover: var(--link-hover);
+  --research-abstract: var(--abstract-bg);
+  --research-journal: #b22234;
   margin: 0;
   min-height: 100vh;
   background: var(--research-page);
   color: var(--research-ink);
-  font-family: "Lato", sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   font-size: 1.06rem;
   line-height: 1.5;
   text-align: justify;
 }
 
-.research-body a{ color: var(--research-link); text-decoration: none; }
-.research-body a:hover{ color: var(--research-link-hover); text-decoration: underline; }
+.research-body .site-wrap a{ color: var(--research-link); text-decoration: none; }
+.research-body .site-wrap a:hover{ color: var(--research-link-hover); text-decoration: underline; }
 
-.research-body .site-nav{ background: var(--research-nav); color: #fff; }
-
-.research-body .nav-inner{
-  width: 100%;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.research-body .brand{
-  padding: 5px 0;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.research-body .brand:hover{ color: #fff; text-decoration: none; }
-
-.research-body .nav-links{ display: flex; align-items: center; gap: 2px; }
-
-.research-body .nav-links a{
-  padding: 8px;
-  color: rgba(255,255,255,0.62);
-  font-size: 1.06rem;
-  font-weight: 600;
-  line-height: 1.5;
-  text-decoration: none;
-}
-
-.research-body .nav-links a:hover,
-.research-body .nav-links a.active{ color: #fff; text-decoration: none; }
+:root.dark .research-body{ --research-journal: #fb7185; }
 
 .research-body .site-wrap{
   width: 100%;
@@ -489,7 +454,7 @@ a:hover{ color: var(--link-hover); }
 .research-body .research-item{
   margin: 0 0 24px;
   padding-left: 0.9rem;
-  border-left: 3px solid #9ea9a2;
+  border-left: 3px solid var(--border);
 }
 
 .research-body .research-item:last-child{ margin-bottom: 0; }
@@ -513,16 +478,16 @@ a:hover{ color: var(--link-hover); }
 }
 
 .research-body .coauthor{ font-style: italic; }
-.research-body .journal{ color: #b22234; font-weight: 600; }
+.research-body .journal{ color: var(--research-journal); font-weight: 600; }
 .research-body .abstract-toggle{ margin-top: 7px; }
 
 .research-body .abstract-toggle summary{
   display: inline-block;
   padding: 5px 12px;
-  border: 1px solid #6c757d;
+  border: 1px solid var(--muted);
   border-radius: 4px;
   background: transparent;
-  color: #6c757d;
+  color: var(--muted);
   cursor: pointer;
   font-size: 12px;
   line-height: 18px;
@@ -531,7 +496,7 @@ a:hover{ color: var(--link-hover); }
 }
 
 .research-body .abstract-toggle summary::-webkit-details-marker{ display: none; }
-.research-body .abstract-toggle summary:hover{ background: #6c757d; color: #fff; }
+.research-body .abstract-toggle summary:hover{ background: var(--muted); color: var(--bg); }
 .research-body .hide-label{ display: none; }
 .research-body .abstract-toggle[open] .show-label{ display: none; }
 .research-body .abstract-toggle[open] .hide-label{ display: inline; }
@@ -539,9 +504,11 @@ a:hover{ color: var(--link-hover); }
 .research-body .abstract{
   margin-top: 0.6rem;
   padding: 0.85rem 0.95rem;
-  border-left: 2px solid #a32642;
+  border: 1px solid var(--abstract-border);
+  border-left: 3px solid var(--author);
+  border-radius: 6px;
   background: var(--research-abstract);
-  color: #252525;
+  color: var(--research-ink);
   font-size: 0.92rem;
   font-style: italic;
   line-height: 1.5;
@@ -559,9 +526,6 @@ a:hover{ color: var(--link-hover); }
 }
 
 @media (max-width: 767.98px){
-  .research-body .nav-inner{ align-items: flex-start; flex-direction: column; gap: 4px; }
-  .research-body .nav-links{ width: 100%; flex-wrap: wrap; }
-  .research-body .nav-links a:first-child{ padding-left: 0; }
   .research-body .section-label,
   .research-body .section-content{ width: 100%; }
   .research-body .section-label{ margin-bottom: 10px; }
@@ -569,6 +533,4 @@ a:hover{ color: var(--link-hover); }
 
 @media (max-width: 440px){
   .research-body{ font-size: 1rem; }
-  .research-body .nav-inner{ padding-inline: 12px; }
-  .research-body .nav-links a{ padding: 7px 6px; font-size: 15px; }
 }
