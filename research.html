@@ -6,6 +6,18 @@
   <meta name="description" content="Research and publications by Vedant Bhardwaj" />
   <title>Research | Vedant Bhardwaj</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* All research paper titles use the same blue as the original publication links.
+       Preserve the website's existing font, font size, and weight. */
+    .research-body .section-content .research-item > h2,
+    .research-body .section-content .research-item > h2 > a,
+    .research-body .section-content .research-item > h2 > a:visited,
+    .research-body .section-content .research-item > h2 > a:hover,
+    .research-body .section-content .research-item > h2 > a:focus {
+      color: #2563eb !important;
+      text-decoration: none !important;
+    }
+  </style>
 </head>
 <body class="research-body">
 <header class="topbar">
@@ -30,14 +42,14 @@
     </div>
     <div class="section-content">
       <article class="research-item">
-        <h2><a href="Job_Market_Paper_Vedant_Bhardwaj.pdf" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: underline; text-underline-offset: 3px;">The Anatomy of Wage Compression: Locally Robust Inference for Conditional Inequality and Exact Decomposition</a></h2>
+        <h2><a href="Job_Market_Paper_Vedant_Bhardwaj.pdf" target="_blank" rel="noopener noreferrer">The Anatomy of Wage Compression: Locally Robust Inference for Conditional Inequality and Exact Decomposition</a></h2>
         <details class="abstract-toggle">
           <summary>
             <span class="show-label">Show Abstract</span>
             <span class="hide-label">Hide Abstract</span>
           </summary>
           <div class="abstract">
-            An aggregate decline in wage inequality does not reveal whether wages converged across worker types or became more equal among comparable workers. I develop locally robust estimation and inference for the exact within–between decomposition and conditional inequality based on the Theil index, accommodating high-dimensional worker, job, and employer characteristics through machine-learning first stages. Using Portuguese matched employer–employee data (2011–2019), a period of substantial minimum-wage increases, I find that the decline is concentrated in the between component and almost entirely captured by worker and job characteristics. Despite a nearly unchanged aggregate within component, conditional inequality falls among non-college workers at more exposed employers, while college-educated men show little comparable decline.
+            An aggregate decline in wage inequality does not reveal whether wages converged across worker types or became more equal among comparable workers. I develop locally robust estimation and inference for conditional Theil inequality and the aggregate within–between decomposition, accommodating rich worker, job, and employer characteristics through flexible machine-learning first stages. Using Portuguese matched employer–employee data (2011–2019), I find that the between-component decline slightly exceeds the aggregate decline and is almost entirely captured when conditioning on worker and job characteristics alone. Despite a nearly unchanged aggregate within component, conditional dispersion generally falls among non-college workers, particularly among high-school and some-college workers at employers more exposed to the 2014 minimum-wage increase. College-educated men show little comparable decline. These descriptive findings reveal wage compression concealed by aggregate measures.
           </div>
         </details>
       </article>
@@ -50,7 +62,7 @@
     </div>
     <div class="section-content">
       <article class="research-item">
-        <h2><a href="GIR.pdf" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: underline; text-underline-offset: 3px;">Gini Index Regression</a></h2>
+        <h2><a href="GIR.pdf" target="_blank" rel="noopener noreferrer">Gini Index Regression</a></h2>
         <p class="small-meta authors">with <span class="coauthor">David Díaz-Villarejo</span></p>
         <details class="abstract-toggle">
           <summary><span class="show-label">Show Abstract</span><span class="hide-label">Hide Abstract</span></summary>
